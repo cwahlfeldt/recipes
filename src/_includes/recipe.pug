@@ -1,0 +1,19 @@
+extends base.pug
+
+block content
+    .flex.flex-col.gap-6(class="sm:flex-row")
+
+        div(class="sm:w-1/3")
+            h2.heading.text-2xl.text-sans.mb-2.border-b.border-black
+                | Ingredients
+
+            ul.list-disc.pl-4
+                each ingredient in ingredients
+                    li !{ingredient}
+
+        div(class="sm:w-2/3")
+            h2.heading.text-2xl.text-sans.mb-2.border-b.border-black
+                | Directions
+
+            .content.prose
+                | !{content}
