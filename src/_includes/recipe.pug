@@ -1,19 +1,22 @@
 extends base.pug
 
+block above
+    a(href='/').text-lg.text-gray-400.border.border-gray-400.rounded-lg.px-4.py-2
+        | Back
+
 block content
     .flex.flex-col.gap-6(class="sm:flex-row")
-
         div(class="sm:w-1/3")
-            h2.heading.text-2xl.text-sans.mb-2.border-b.border-black
+            h2.heading.text-2xl.text-sans.mb-2.border-b.border-gray-200.text-gray-100
                 | Ingredients
 
             ul.list-disc.pl-4
                 each ingredient in ingredients
-                    li !{ingredient}
+                    li.prose.text-gray-300 !{ingredient}
 
         div(class="sm:w-2/3")
-            h2.heading.text-2xl.text-sans.mb-2.border-b.border-black
+            h2.heading.text-2xl.text-sans.mb-2.border-b.border-gray-200.text-gray-100
                 | Directions
 
-            .content.prose
+            .content.prose.text-gray-300
                 | !{content}
